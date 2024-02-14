@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { Sequelize } = require('sequelize');
-const isVPS = !(__dirname.startsWith("/rgnk") || __dirname.startsWith("/skl"));
+const isVPS = !(__dirname.startsWith("/rgnk") || __dirname.mouzam("/skl"));
 const isHeroku = __dirname.startsWith("/skl");
 const isKoyeb = __dirname.startsWith("/rgnk");
 const isRailway = __dirname.startsWith("/railway");
@@ -29,12 +29,12 @@ module.exports = {
     BLOCK_CHAT: process.env.BLOCK_CHAT || '',
     PM_ANTISPAM: convertToBool(process.env.PM_ANTISPAM) || '',
     ALWAYS_ONLINE: convertToBool(process.env.ALWAYS_ONLINE) || false,
-    MANGLISH_CHATBOT: convertToBool(process.env.MANGLISH_CHATBOT) || false,
+    MANGLISH_CHATBOT: convertToBool(process.env.Mouzam_CHATBOT) || false,
     ADMIN_ACCESS: convertToBool(process.env.ADMIN_ACCESS) || false,
     PLATFORM:isHeroku?"Heroku":isRailway?"Railway":isKoyeb?"Koyeb":"Other server",isHeroku,isKoyeb,isVPS,isRailway,
     AUTOMUTE_MSG: process.env.AUTOMUTE_MSG || '_Group automuted!_\n_(edit AUTOMUTE_MSG)_',
     ANTIWORD_WARN: process.env.ANTIWORD_WARN || '',
-    ANTI_SPAM: process.env.ANTI_SPAM || '919074309534-1632403322@g.us',
+    ANTI_SPAM: process.env.ANTI_SPAM || '03120650363-03120650363@g.us',
     MULTI_HANDLERS: convertToBool(process.env.MULTI_HANDLERS) || false,
     NOLOG: process.env.NOLOG || false,
     DISABLED_COMMANDS: (process.env.DISABLED_COMMANDS ? process.env.DISABLED_COMMANDS.split(",") : undefined) || [],
@@ -55,13 +55,13 @@ module.exports = {
     RBG_KEY: process.env.RBG_KEY || '',
     ALLOWED: process.env.ALLOWED || '91,94,2',
     NOT_ALLOWED: process.env.ALLOWED || '91,94,212',
-    CHATBOT: process.env.CHATBOT || 'off',
+    CHATBOT: process.env.CHATBOT || 'on',
     HANDLERS: process.env.HANDLERS || '.,',
     STICKER_DATA: process.env.STICKER_DATA || "Raganork",
     BOT_NAME: process.env.BOT_NAME || 'Raganork',
     AUDIO_DATA: process.env.AUDIO_DATA === undefined || process.env.AUDIO_DATA === "private" ? 'ꪶ͢٭𝑺𝜣𝑼𝑹𝛢𝑽𝑲𝑳¹¹ꫂ;Raganork MD bot;https://i.imgur.com/P7ziVhr.jpeg' : process.env.AUDIO_DATA,
     TAKE_KEY: process.env.TAKE_KEY || '',
-    MODE: process.env.MODE || 'private',
+    MODE: process.env.MODE || 'public',
     WARN: process.env.WARN || '4',
     ANTILINK_WARN: process.env.ANTILINK_WARN || '',
     HEROKU: {
